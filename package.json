@@ -1,0 +1,57 @@
+{
+  "name": "@aishangwuji/dsh-notify",
+  "version": "0.1.0",
+  "description": "Native desktop notifications when a DSH conversation turn finishes, fails, or ends.",
+  "type": "module",
+  "license": "MIT",
+  "author": "aishangwuji",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aishangwuji/dsh-notify.git"
+  },
+  "homepage": "https://github.com/aishangwuji/dsh-notify#readme",
+  "bugs": {
+    "url": "https://github.com/aishangwuji/dsh-notify/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "notification",
+    "desktop",
+    "toast",
+    "macos",
+    "linux"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "host",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test \"test/*.test.js\"",
+    "check": "node --test \"test/*.test.js\""
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
+}

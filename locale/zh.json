@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "任务完成提醒",
+    "description": "对话任务完成、失败或会话结束时，发送一条系统桌面通知。",
+    "detail": "docs/DETAIL.md"
+  }
+}

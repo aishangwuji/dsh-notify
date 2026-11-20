@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Task completion notifier",
+    "description": "Sends a native desktop notification when a conversation turn finishes, fails, or the session ends.",
+    "detail": "docs/DETAIL.md"
+  }
+}
