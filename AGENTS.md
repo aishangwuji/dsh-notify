@@ -24,6 +24,8 @@ scripts/notify-test.mjs  真实发一条测试通知
 test/                 node:test 套件
 ```
 
+技术债、未接入模块与待评估项见 `systemmap/tech-debt.md`，不要写回本文。
+
 ## 3. 项目约束
 
 - **不引第三方依赖**：宿主半只 import `node:*` 和相对路径。
@@ -52,14 +54,7 @@ npm pack --dry-run --json      # 核对 tarball
 4. **macOS 通知归属**：`osascript` 的 `display notification` 通常显示为 Script Editor，这是无额外依赖方案的固有限制。
 5. **Linux 需要通知守护进程**：headless/SSH 环境没有 `notify-send` 目标，只会在 Host 日志留一条警告。
 
-## 6. 技术债
-
-1. 没有点击通知回到 DSH 的能力（没有可用的 OS 命令 URL scheme）。
-2. 没有设置 UI；配置只能改 profile 的 `cordis.patch.yml`。
-3. macOS 通知归属不是 DeepSeek Harness；要完全归属需要签名 helper。
-4. 真实端到端只在 Windows 验证过；macOS/Linux 只有命令计划单测。
-
-## 7. 仓库与发布
+## 6. 仓库与发布
 
 - GitHub：`aishangwuji/dsh-notify`（public，`main`）
 - npm：`@aishangwuji/dsh-notify`，当前 `0.1.0`
